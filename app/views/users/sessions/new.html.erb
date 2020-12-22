@@ -1,0 +1,51 @@
+
+
+<div class="inline-block_test">
+  <h1>ログイン</h1>
+</div>
+
+<div class="inline-block_test">
+  <p>※登録したメールアドレスとパスワードを入力してください。</p>
+</div>
+
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <div class="inline-block_test">
+        <h2>メールアドレス </h2><br />
+      </div>
+        
+      <div class="inline-block_test up">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="inline-block_test">
+        <h2>パスワード </h2><br />
+      </div>
+
+      <div class="inline-block_test up">
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <div class="inline-block_test">
+          <%= f.check_box :remember_me %>
+        </div>
+
+        <div class="inline-block_test">
+          <p>ログイン状態を保持する</p>
+        </div>
+      </div>
+    <% end -%>
+
+    <div class="actions">
+      <%= f.submit "ログイン" %>
+    </div>
+  <% end %>
+
+  <%= render "users/shared/links" %>
+</div>

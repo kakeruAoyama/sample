@@ -1,0 +1,93 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tweet{
+    width: 50%;
+    border: 10px outset #666666;
+}
+
+.search-box{
+    position: fixed;
+    top: 0;
+    right: 5%;
+    margin: 0;
+}
+
+.home{
+    position: fixed;
+    top: 20%;
+    right: 5%;
+    margin: 0;
+}
+
+.new-tweet{
+    position: fixed;
+    top: 40%;
+    right: 5%;
+    margin: 0;
+}
+
+.logout{
+    position: fixed;
+    top: 60%;
+    right: 5%;
+    margin: 0;
+}
+
+.mypage{
+    position: fixed;
+    top: 80%;
+    right: 5%;
+    margin: 0;
+}
+
+.menu{
+    height:15%;
+    width:40%;
+    position: fixed;
+    top: 15%;
+    right: 0;
+    margin: 0;
+    text-align:  center;
+    background-color: rgb(117, 117, 235);
+    
+}
+
+.index{
+    width:50%;
+    text-align: center;
+}
+
+#center{
+    text-align:  center;
+}
+
+html,body {
+    height: 100%
+  }
+
+footer {
+    width: 100%;
+    height: 120px; 
+    text-align: center;
+    padding: 50px 0;
+    background-color: #000000;
+}
+
+.tweet img{
+    width: 200px;
+}
+  
+body:after {/*擬似要素をつくる*/
+position: fixed;/*固定配置*/
+top: 0; left: 0;/*左上に固定*/
+width: 100%; height: 100%;/*画面全体を覆う*/
+z-index: -1;/*背景にするため*/
+content: "";
+// background: #C0C0C0;/*保険用*/
+// background: -moz-linear-gradient(top, #C0C0C0 0%,#000000 100%);/*古いFireFox向け*/
+// background: -webkit-linear-gradient(top, #C0C0C0 0%,#000000 100%);/*古いSafari・Chrome向け*/
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbcacb', endColorstr='#f79697',GradientType=0 );/*IE9以下への対応*/
+// background: linear-gradient(to bottom, #C0C0C0 0%, #000000 100%);/*正規のプロパティ*/
+    }

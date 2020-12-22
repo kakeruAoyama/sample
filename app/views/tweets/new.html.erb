@@ -1,0 +1,16 @@
+投稿フォーム
+<%= form_for(@tweet, :url => { controller:'tweets', action:'create'})do |f| %>
+   <%= f.label :投稿内容 %>
+   <br>
+   <%= f.text_field :body,size: 140,required: true %>
+   <br>
+   <div class="field">
+     <%= f.label :image %>
+     <br>
+     <%= f.file_field :image %>
+   </div>
+   <br> 
+<%= f.submit "ツイートする" %>
+   <br>
+   <%= link_to "ホーム", tweets_index_path %>
+<% end %>

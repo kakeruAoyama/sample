@@ -1,0 +1,70 @@
+<div class = "title">
+<h1>GeekTwitter</h1>
+</div>
+
+<div class = "search-box">
+  <div id = "center">
+    <h3>検索</h3>
+  </div>
+    
+  <%= form_tag({controller:"tweets",action:"index"}, method: :get) do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag 'ツイートを検索'  %>
+  <% end %>
+</div>
+
+<div class = "index">
+<h3>Tweet一覧</h3>
+</div>
+
+<div class = "menu">
+  <h3>メニュー</h3>
+  <%= link_to "ホーム", tweets_index_path %>
+  <%= link_to "新しいツイート", tweets_new_path %>
+  <br>
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+ 
+</div>
+
+  <div class = "home">
+    
+  </div>
+
+  <div class = "new-tweet">
+    
+  </div>
+
+  <div class = "logout">
+   
+  </div>
+
+  <div class = "mypage">
+    
+  </div>
+  
+
+
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+    <div class="tweet">
+      
+      <%= t.user.name %>
+      <br>
+      <%= t.body %>
+      <br>
+      
+        <%= image_tag t.image_url %>
+      
+      <br>
+      <%= t.created_at %>
+      <br>
+      <%= link_to "詳細へ", tweet_path(t.id) %>
+
+    </div>
+  <% end %>
+</div>
+
+
+<footer>
+  <p>(c)copy right</p>
+</footer>

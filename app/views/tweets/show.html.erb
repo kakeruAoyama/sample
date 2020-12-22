@@ -1,0 +1,13 @@
+<h1>GeekTwitter</h1>
+<h3>Tweet詳細</h3>
+<div class="tweet">
+  <p><%= @tweet.body %></p>
+  <div class="image">
+    <%=  image_tag @tweet.image_url %>
+  </div>
+  <p><%= @tweet.created_at %></p>
+  <%= link_to "編集する", edit_tweet_path(@tweet.id) %>
+  <%= link_to "削除する", tweet_path(@tweet.id), method: :delete %>
+</div>
+
+<%= link_to "ホーム", tweets_index_path %>
