@@ -4,7 +4,7 @@
 
 <div class = "search-box">
   <div id = "center">
-    <h3>検索</h3>
+    <h3>検索するよ</h3>
   </div>
     
   <%= form_tag({controller:"tweets",action:"index"}, method: :get) do %>
@@ -14,15 +14,15 @@
 </div>
 
 <div class = "index">
-<h3>Tweet一覧</h3>
+<h3>Tweet一覧だよ</h3>
 </div>
 
 <div class = "menu">
   <h3>メニュー</h3>
-  <%= link_to "ホーム", tweets_index_path %>
-  <%= link_to "新しいツイート", tweets_new_path %>
+  <%= link_to "ホームだよ", tweets_index_path %>
+  <%= link_to "新しいツイートだよ", tweets_new_path %>
   <br>
-  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+  <%= link_to 'ログアウトだよ', destroy_user_session_path, method: :delete %>
  
 </div>
 
@@ -58,7 +58,7 @@
       <br>
       <%= t.created_at %>
       <br>
-      <%= link_to "詳細へ", tweet_path(t.id) %>
+      <%= link_to "詳細だよ", tweet_path(t.id) %>
 
     </div>
   <% end %>
